@@ -1,0 +1,615 @@
+/*   
+Theme Name: Stellartronic
+Theme URL: http://www.dcjwest.com/
+Description: Hand-crafted portfolio website
+Author: David van der Westhuizen
+Copyright (c) 2018 David van der Westhuizen
+*/
+
+/* CSS3 File v1.0 - Initial Release */
+
+/*========================================*/
+
+/* Font Embedding */
+
+@font-face {
+	font-family: 'Calibri';
+	src: url('fonts/calibri.ttf') format('ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  src: url('fonts/seguisym.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Impact';
+  src: url('fonts/impact.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima nova light';
+  src: url('fonts/proximanova-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*========================================*/
+
+/*Universal*/
+body {
+	color: #111;
+	font-family: 'Calibri', 'Segoe UI', Sans-serif;
+	font-size: 18px;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+}
+
+/*========================================*/
+
+/*Header and Navigation*/
+header {
+	background: #000;
+	color: #FFF;
+	padding: 5px 30px;
+	position: fixed;
+	margin: 0;
+	width: 100%;
+	z-index: 5;
+}
+nav {
+	position: relative;
+}
+nav ul {
+	display: inline-block;
+	list-style: none;
+	margin: 10px 0 10px 40px;
+	padding: 0px;
+}
+nav ul li, #mobile-nav .link {
+	display: inline-block;
+	font-family: 'Impact', 'Segoe UI', Sans-serif ;
+	font-size: 20px;
+	padding: 0 10px;
+}
+nav ul li a, #mobile-nav .link {
+	color: #FFF;
+	text-decoration: none;
+}
+#myEmail {
+	position: absolute;
+	left: -9999px;
+}
+.icon-links {
+	float: right;
+	margin: 10px 30px 10px 0;
+	width: auto;
+}
+.emailBtn {
+	background-color: transparent;
+	border-color: transparent;
+	margin: 0;
+	padding: 0;
+}
+.emailBtn:focus {
+	outline: none;
+}
+.emailBtn:hover {
+	color: #aaa;
+	cursor: pointer;
+}
+.icon-links li {
+	margin: 0 20px;
+	padding: 0;
+}
+.icon-links li img, #mobile-nav img {
+	background-color: #FFF;
+	width: 25px;
+}
+.logo {
+	background-color: #FFF;
+	display: inline-block;
+	float: left;
+	margin-left: 30px;
+	width: 50px;
+}
+.logo:hover, .icon-links li img:hover, #mobile-nav img:hover {
+	transition: background-color .3s;
+	background-color: #F00;
+}
+
+.link:hover, #mobile-nav .link:hover {
+	transition: color .3s;
+	color: #F00;
+	text-decoration: none;
+}
+#mobile-nav {
+	display: none;
+}
+
+/*========================================*/
+
+/*MAIN SECTIONS*/
+
+.section {
+	margin: 0 0 20px 0;
+	padding: 0;
+	width: 100%;
+}
+
+.infobox {
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+}
+
+/*========================================*/
+
+/*Introduction*/
+#intro {
+	background: url("images/david-bg-bw.jpg") no-repeat;
+	background-size: cover;
+	height: 670px;
+	padding: 40px 0;
+	text-align: center;
+}
+#intro h1 {
+	color: #FFF;
+	font-size: 50px;
+	margin: 10px 0 0 0;
+}
+#intro p {
+	color: #FFF;
+	font-size: 20px;
+	margin-top: 12px;
+}
+#intro span {
+	color: #F00;
+	font-style: italic;
+	font-weight: bold;
+}
+.slider {
+	margin: 30px auto;
+	max-width: 350px;
+}
+.slider img {
+	border: 10px solid #FFF;
+	border-radius: 200px;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+	display: block;
+	width: 100%;
+}
+/*========================================*/
+
+/*About Me*/
+#about {
+	padding-top: 60px;
+	text-align: left;
+}
+#about h1 {
+	margin: 0 0 20px 0;
+}
+
+#about img {
+	border-radius: 300px;
+	float: left;
+	margin: 0 20px;
+	width: 25%;
+}
+#about p {
+	font-size: 20px;
+	margin: 0 40px;
+	padding: 0 10px;
+}
+.skillList {
+	clear: both;
+	width: 70%;
+}
+.skillList h2 {
+	margin-top: 0; 
+	text-align: center;
+}
+.skillCol {
+	font-size: 22px;
+	height: 30px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+.skillBar {
+	background-color: #20201F;
+	border-radius: 20px;
+	color: #FFF;
+	display: inline-block;
+	font-size: small;
+	height: 19px;
+	line-height: 1.3em;
+	margin: 5px 30px 5px 5px;
+	padding: 1px 5px 10px 1px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 60%;
+	text-align: right;
+}
+.skill {
+	background-color: #F00;
+	border-radius: 10px;
+	float: left;
+	height: 15px;
+	margin: 1px 0 1px 1px;
+	padding-right: 5px;
+}
+#skill1 {width: 80%;} /*Communication*/
+#skill2 {width: 90%;} /*Learning*/
+#skill3 {width: 70%;} /*Organisation*/
+#skill4 {width: 80%;} /*Researching*/
+#skill5 {width: 70%;} /*Web Design*/
+#skill6 {width: 60%;} /*Programming*/
+#skill7 {width: 60%;} /*UX Design*/
+#skill8 {width: 100%;} /*Yelling at PC*/
+
+/*========================================*/
+
+/*Projects*/
+
+#projects {
+	margin: 40px auto;
+	padding-top: 0; 
+	width: 90%;
+	text-align: center;
+}
+#projects h4 {
+	font-style: italic;
+	padding-top: 10px;
+	text-transform: uppercase;
+}
+.project-col {
+	background: #FFF;
+	border-radius: 7px;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7), 0 0 1px rgba(0, 0, 0, 0.3);
+	/*margin: 10px auto;*/
+	padding: 10px 15px;
+	text-align: center;
+}
+.project-col h5 {
+	text-align: center;
+}
+.projectPic {
+	display: block;
+	margin: 10px auto;
+	width: 40%;
+}
+.project-link, .project-link:hover, .project-link:focus {
+	color: #000;
+	outline: 0;
+	text-decoration: none;
+}
+/*========================================*/
+
+/*Contact*/
+#contact {
+	margin: 0 auto;
+	width: 61%;
+}
+#contactPic {
+	border-radius: 500px;
+	float: right;
+	width: 40%;
+}
+#contact h1 {
+	text-align: left;
+}
+#contact p {
+	font-size: 20px;
+	color: #333;
+}
+#contact ul {
+	display: block;
+	padding: 0;
+}
+#contact li {
+	font-size: 25px;
+	margin: 10px;
+	padding-bottom: 20px;
+	list-style-type: none;
+}
+#contact li a {
+	color: #000;
+	text-decoration: none;
+}
+#contact li img {
+	vertical-align: top;
+	margin-right: 10px;
+	width: 40px;
+}
+#contact li a:hover, #contact li button:hover {
+	color: #aaa;
+	transition: color 0.3s;
+}
+footer {
+	text-align: center;
+}
+#myFooter {
+	color: #999;
+	text-decoration: none;
+}
+#myFooter:hover {
+	color: #333;
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+/*========================================*/
+
+/*Responsive design rules for mobile devices*/
+@media only screen and (min-width: 990px) and (max-width: 1200px){
+	.skillList {
+		width: 90%;
+	}
+	.skillCol {
+		font-size: 20px;
+	}
+}
+
+@media only screen and (min-width: 576px) and (max-width: 990px){
+	nav ul, nav ul li, .icon-links, .logo {
+		margin: 0;
+	}
+	nav ul li, .icon-links li {
+		margin: 10px 12px;
+		padding: 0;
+	}
+	.icon-links {
+		width: auto;
+	}
+	.logo {
+		margin: 0 20px;
+	}
+	.slider {
+		max-width: 230px;
+	}
+	.slider img {
+	border: 8px solid #FFF;
+	}
+	#intro h1 {
+		font-size: 35px;
+	}
+	#intro p {
+		font-size: 15px;
+	}
+	.skillList {
+		margin: 0 auto;
+		padding: 0;
+		width: auto;
+	}
+	.skillCol {
+		font-size: 19px;
+	}
+	.skillBar {
+		width: 47%;
+	}
+	.project-col {
+		width: 100%;
+	}
+	.project-col h5 {
+		font-size: 19px;
+	}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 576px){
+	nav ul, nav ul li, .icon-links, .logo {
+		margin: 0;
+	}
+	nav ul li, .icon-links li {
+		margin: 10px 7px;
+		padding: 0;
+	}
+	.icon-links {
+		width: auto;
+	}
+	.logo {
+		margin-right: 10px;
+	}
+	.slider {
+		max-width: 210px;
+	}
+	.slider img {
+		border: 6px solid #FFF;
+	}
+	#intro h1 {
+		font-size: 33px;
+	}
+	#intro p {
+		font-size: 14px;
+	}
+	.skillList {
+		margin: 0 10px;
+		width: auto;
+	}
+	.skillCol {
+		font-size: 20px;
+		padding-left: 30px;
+	}
+	.skillBar {
+		width: 50%;
+	}
+	.project-col {
+		margin: 10px 0;
+		width: 100%;
+	}
+}
+
+@media only screen and (min-width: 280px) and (max-width: 480px){
+/*Header and Navigation*/
+	header {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	nav ul {
+		display: none;
+	}
+	#menu-btn {
+		background: #000;
+		display: inline-block;
+		margin: 7px 20px 0 0;
+	}
+	#menu-btn:hover {
+		background: #333;
+	}
+	#mobile-nav {
+		display: none;
+		position: absolute;
+		text-align: center;
+		top: 55px;
+		width: 100%;
+	}
+	#mobile-nav .link{
+		margin: 15px;
+	}
+	#mobile-nav img {
+		text-align: center;
+		padding: 0;
+		width: 25px;
+	}
+	#mobile-nav .link-bg {
+		background: #000;
+		border-top: 1px solid #777;
+		width: 100%;
+	}
+	#mobile-nav .link-row {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+
+/*Introduction*/
+	#intro {
+		height: 100%;
+	}
+	.logo {
+		margin-left: 30px;
+	}
+	.slider {
+		max-width: 180px;
+	}
+	.slider img {
+		border: 4px solid #FFF;
+		border-radius: 200px;
+		box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+	}
+	#intro h1 {
+		font-size: 28px;
+	}
+	#intro p {
+		font-size: 13px;
+	}
+
+/*About Me*/
+	#about {
+		padding: 10px;
+		width: 100%;
+	}
+
+	#about h1, #about p {
+		margin: 5px;
+		padding: 0;
+	}
+	#about p {
+		font-size: 16px;
+	}
+	#about img {
+		margin: 0 10px 0 0;
+	}
+	.skillList {
+		margin: 0 10px;
+		width: auto;
+	}
+	.skillCol {
+		font-size: 18px;
+		padding: 0;
+	}
+	.skillBar {
+		width: 45%;
+	}
+
+/*Projects*/
+	#projects {
+		padding: 0;
+	}
+	#projects h4 {
+			font-size: 20px;
+	}
+	.project-col {
+		margin: 10px 0;
+		width: 100%;
+	}
+
+/*Contact*/
+	#contact {
+		padding: 0 10px;
+		width: 100%;
+	}
+	#contact p {
+		font-size: 16px;
+	}
+	#contact li {
+		font-size: 20px;
+	}
+	#contact li img {
+		width: 30px;
+	}
+	#contactPic {
+		width: 50%;
+	}
+}
+/*Helper Rules for fixing rows/columns*/
+.bg-red {background: red;
+}
+.bg-black {background: black;}
+
+/*.tooltip {
+	display: inline-block;
+	position: relative;
+}*/
+/*.tooltip .tooltiptext {
+	visibility: hidden;
+	width: 140px;
+	background-color: #555;
+	color: #FFF;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px;
+	position: absolute;
+	z-index: 1;
+	top: 150%;
+	left: 50%;
+	margin-left: -75px;
+	opacity: 0;
+	transition: opacity .3s;
+}
+.tooltip .tooltiptext::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #555 transparent transparent transparent;
+}
+.tooltip:hover .tootiptext {
+	visibility: visible;
+	opacity: 1;
+}*/
