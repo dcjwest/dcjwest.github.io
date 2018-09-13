@@ -172,6 +172,7 @@ nav ul li a, #mobile-nav .link {
 #intro p {
 	color: #FFF;
 	font-size: 20px;
+	font-weight: bold;
 	margin-top: 12px;
 }
 #intro span {
