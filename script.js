@@ -9,7 +9,9 @@ Copyright (c) 2018 David van der Westhuizen
 /* jQuery Script File v1.0 - Initial Release */
 
 $(function(){
-	$(document.body).fadeIn(1000);
+	window.onload = function(){
+	    $('body').fadeIn(2000).addClass('loaded');
+	}
 
 	var menuBtn = $('#menu-btn');
 	var menuLinks = $('#mobile-nav a');
