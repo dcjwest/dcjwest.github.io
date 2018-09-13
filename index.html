@@ -17,20 +17,21 @@ Copyright (c) 2018 David van der Westhuizen
 	<link rel="stylesheet" type="text/css" href="tools/menu button/menu.css">
 	<link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<style type="text/css">
+	<!-- <style type="text/css">
 		body {
 			display: none;
 		}
-	</style>
-	<noscript>
+	</style> -->
+	<!-- <noscript>
 		<style type="text/css">
 			body {
 				display: block;
 			}
 		</style>
-	</noscript>
+	</noscript> -->
 </head>
 <body>
+	<div id="hideAll">&nbsp;</div>
 	<!--Header and Navigation-->
 	<header id="navBar">
 		<nav>
@@ -161,7 +162,11 @@ Copyright (c) 2018 David van der Westhuizen
     <script type="text/javascript" src="tools/bootstrap/js/bootstrap.min.js"></script>
 	<script type = "text/javascript" src = "script.js"></script>
 	<script>
-    $(function() {
+		window.onload = function() 
+			{ document.getElementById("hideAll").style.display = "none"; }
+
+		$(function() {
+
       // Smooth Scrolling code snippet - source: https://stackoverflow.com/questions/7717527/smooth-scrolling-when-clicking-an-anchor-link 
       $('a[href*="#"]:not([href="#"])').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {

@@ -59,6 +59,19 @@ h1, h2, h3, h4, h5, h6 {
 
 /*========================================*/
 
+/* Hide page until window loads  */
+#hideAll
+ {
+ 	background-color: white;
+	position: fixed;
+	left: 0px; 
+	right: 0px; 
+	top: 0px; 
+	bottom: 0px;
+	z-index: 999;
+
+ }
+
 /*Header and Navigation*/
 header {
 	background: #000;
