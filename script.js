@@ -10,7 +10,7 @@ Copyright (c) 2018 David van der Westhuizen
 
 $(function(){
 	window.onload = function(){
-	    $('body').animate({opacity: 1}, 2000);
+	    $('body').animate({opacity: 1}, 1500);
 	}
 
 	var menuBtn = $('#menu-btn');
