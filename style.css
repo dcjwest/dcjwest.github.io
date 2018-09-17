@@ -29,16 +29,18 @@ Copyright (c) 2018 David van der Westhuizen
 /*========================================*/
 
 /*Universal*/
-body {
+html, body {
 	color: #111;
 	font-family: 'proxima nova light', sans-serif;
 	font-size: 18px;
 	margin: 0;
-	opacity: 0;
 	padding: 0;
+	height: 100%;
 	width: 100%;
 }
-
+body {
+	opacity: 0;
+}
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Oswald', 'Impact', sans-serif;
 	font-weight: bold;
@@ -148,7 +150,7 @@ nav ul li a, #mobile-nav .link {
 #intro {
 	background: url("images/david-bg-bw.jpg") no-repeat;
 	background-size: cover;
-	height: 100vh;
+	height: 100%;
 	padding: 40px 0;
 	text-align: center;
 }
@@ -223,7 +225,7 @@ nav ul li a, #mobile-nav .link {
 	display: inline-block;
 	font-size: small;
 	height: 19px;
-	line-height: 1.3em;
+	line-height: 1.4em;
 	margin: 5px 30px 5px 5px;
 	padding: 1px 5px 10px 1px;
 	position: absolute;
@@ -237,6 +239,7 @@ nav ul li a, #mobile-nav .link {
 	border-radius: 10px;
 	float: left;
 	height: 15px;
+	line-height: 1.3em;
 	margin: 1px 0 1px 1px;
 	padding-right: 5px;
 }
