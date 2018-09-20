@@ -323,14 +323,17 @@ nav ul li a, #mobile-nav .link {
 	color: #000;
 	text-decoration: none;
 }
-#contact li img {
+.contact-icon {
 	vertical-align: top;
 	margin-right: 10px;
 	width: 40px;
 }
-#contact li a:hover, #contact li button:hover {
+#contact li a:hover, #contact li button:hover{
 	color: #aaa;
 	transition: color 0.3s;
+}
+#contact li a:hover .contact-icon, #contact li button:hover .contact-icon  {
+	animation: iconDance 0.3s linear 0s infinite alternate;
 }
 footer {
 	text-align: center;
@@ -343,6 +346,11 @@ footer {
 	color: #333;
 	text-decoration: none;
 	transition: color 0.3s;
+}
+
+@keyframes iconDance {
+	0% {transform: rotate(15deg);}
+	100% {transform: rotate(-15deg);}
 }
 
 /*========================================*/
@@ -568,7 +576,7 @@ footer {
 	#contact li {
 		font-size: 20px;
 	}
-	#contact li img {
+	.contact-icon {
 		width: 30px;
 	}
 	#contactPic {
