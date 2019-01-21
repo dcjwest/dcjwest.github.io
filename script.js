@@ -32,7 +32,7 @@ $(function(){
 		proPic.fadeIn(400);
 	}
 
-	setInterval(togglePic, 4000);
+	setTimeout(setInterval(togglePic, 4000), 5000);
 
 	// Tooltip pop-up events
 	$('#emailBtn').on('click', updateToolTip);
