@@ -7,34 +7,6 @@ Copyright (c) 2018 David van der Westhuizen
 */
 
 $(function(){
-
-	// Initialise slideshow variables
-	var proPic = $('#slider');
-	var picArr = [
-		'images/slider/david-mj.jpg',
-		'images/slider/david-dance.jpg',
-		'images/slider/david-bboy.jpg',
-		'images/slider/david-ladybug.jpg',
-		'images/slider/david-mtn.jpg',
-		'images/slider/david-dog.jpg'
-		];
-	var currentPicIndex = 0;
-
-	$(window).on('load', function() {
-		// Change slideshow pic every 4 seconds
-		function togglePic(){
-			currentPicIndex++;
-			proPic.fadeOut(400);
-			if (currentPicIndex == picArr.length){currentPicIndex = 0;}
-			
-			setTimeout(function(){
-				proPic.attr('src', picArr[currentPicIndex]);
-			}, 400);
-			proPic.fadeIn(400);
-		}
-		setInterval(togglePic, 4000);
-	});
-
 	// Tooltip pop-up events
 	$('#emailBtn').on('click', updateToolTip);
 	$('#email').on('mouseleave', resetToolTip);
@@ -63,4 +35,31 @@ $(function(){
 	window.onbeforeunload = function () {
 	  window.scrollTo(0, 0);
 	}
+});
+
+$(window).on('load', function() {
+	// Initialise slideshow variables
+	var proPic = $('#slider');
+	var picArr = [
+		'images/slider/david-mj.jpg',
+		'images/slider/david-dance.jpg',
+		'images/slider/david-bboy.jpg',
+		'images/slider/david-ladybug.jpg',
+		'images/slider/david-mtn.jpg',
+		'images/slider/david-dog.jpg'
+		];
+	var currentPicIndex = 0;
+
+	// Change slideshow pic every 4 seconds
+	function togglePic(){
+		currentPicIndex++;
+		proPic.fadeOut(400);
+		if (currentPicIndex == picArr.length){currentPicIndex = 0;}
+		
+		setTimeout(function(){
+			proPic.attr('src', picArr[currentPicIndex]);
+		}, 400);
+		proPic.fadeIn(400);
+	}
+	setInterval(togglePic, 4000);
 });
