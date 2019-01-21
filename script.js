@@ -20,17 +20,16 @@ $(function(){
 		];
 	var currentPicIndex = 0;
 
-	// Start slideshow animation
-	proPic.delay(3000).fadeOut(500);
-	currentPicIndex++;
-
 	// Change slideshow pic every 4 seconds
 	function togglePic(){
-		if (currentPicIndex == picArr.length){currentPicIndex = 0;}
-		proPic.attr('src', picArr[currentPicIndex]);
-		proPic.fadeIn(400).delay(3000);
-		proPic.fadeOut(400);
 		currentPicIndex++;
+		proPic.fadeOut(400);
+		if (currentPicIndex == picArr.length){currentPicIndex = 0;}
+		
+		setTimeout(function(){
+			proPic.attr('src', picArr[currentPicIndex]);
+		}, 400);
+		proPic.fadeIn(400);
 	}
 
 	setInterval(togglePic, 4000);
