@@ -1,113 +1,66 @@
 /*   
 Theme Name: Stellartronic
-Theme URL: http://www.dcjwest.com/
+Theme URL: http://dcjwest.github.io/
 Description: Hand-crafted portfolio website
 Author: David van der Westhuizen
 Copyright (c) 2018 David van der Westhuizen
 */
 
-/* jQuery Script File v1.0 - Initial Release */
-
 $(function(){
-	window.onload = function(){
-	    $('body').animate({opacity: 1}, 1500);
-	}
 
-	var menuBtn = $('#menu-btn');
-	var menuLinks = $('#mobile-nav a');
-	var toggle = $('#toggle-menu');
-	var menuOpen = false;
+	// Initialise slideshow variables
 	var proPic = $('#slider');
-	var picArr = ['images/slider/david-mj.jpg', 'images/slider/david-dance.jpg', 'images/slider/david-bboy.jpg', 'images/slider/david-mtn.jpg', 'images/slider/david-dog.jpg'];
-	var currentPicIndex = 1;
-	var prevScrollPos = window.pageYOffset;
+	var picArr = [
+		'images/slider/david-mj.jpg',
+		'images/slider/david-dance.jpg',
+		'images/slider/david-bboy.jpg',
+		'images/slider/david-ladybug.jpg',
+		'images/slider/david-mtn.jpg',
+		'images/slider/david-dog.jpg'
+		];
+	var currentPicIndex = 0;
 
-//Force scroll position to top of page after refresh
-	window.onbeforeunload = function(){
-		window.scrollTo(0, 0);
-		$('#navBar').slideDown(200);
+	// Start slideshow animation
+	proPic.delay(3000).fadeOut(500);
+	currentPicIndex++;
+
+	// Change slideshow pic every 4 seconds
+	function togglePic(){
+		if (currentPicIndex == picArr.length){currentPicIndex = 0;}
+		proPic.attr('src', picArr[currentPicIndex]);
+		proPic.fadeIn(400).delay(3000);
+		proPic.fadeOut(400);
+		currentPicIndex++;
 	}
 
-// Header and Navigation
+	setInterval(togglePic, 4000);
 
-	menuBtn.on('click', toggleMenu);
+	// Tooltip pop-up events
+	$('#emailBtn').on('click', updateToolTip);
+	$('#email').on('mouseleave', resetToolTip);
 
-// Show Header while scrolling up; Hide Header while scrolling down
-	window.onscroll = function(){
-		var currentScrollPos = window.pageYOffset;
-
-		if(prevScrollPos > currentScrollPos){
-			$('#navBar').slideDown(200);
-		}
-		else {
-			$('#navBar').slideUp(200);
-		}
-		prevScrollPos = currentScrollPos;
+	// Show / Hide tooltip functions
+	function updateToolTip(event){
+		copyToClipboard();
+		$('.tooltip').css({'background-color':'#A5FF7F', 'color': '#000'}).html('Yay! My email address has been copied to your clipboard &#10004;');
+		$('.tooltip').addClass('clicked');
+		event.preventDefault();
 	}
 
-//Animate Menu Button and Dropdown List
-	for(var i = 0; i < menuLinks.length; i++){
-		menuLinks[i].addEventListener('click', toggleMenu);
+	function resetToolTip(event){
+		$('.tooltip').css({'background-color':'#000', 'color': '#fff'}).html('Click to copy my email address to your clipboard! &#9786;');
+		$('.tooltip').removeClass('clicked');
+		event.preventDefault();
 	}
 
-	function animateMenuBtn(){
-		toggle.toggleClass('button-open');
-	}
-
-	function toggleMenu(){
-		animateMenuBtn();
-
-		if(!menuOpen){
-			$('#mobile-nav').slideDown();
-			menuOpen = true;
-		}
-		else{
-			$('#mobile-nav').slideUp();
-			// $('#navBar').slideUp();
-			menuOpen = false;
-		}
-	}
-
-//Copy email address to clipboard after clicking email icon
-	$('.emailBtn').on('click', copyToClipboard);
-
+	//Copy email address to clipboard after clicking email icon
 	function copyToClipboard(){
 		$('#myEmail').select();
 		document.execCommand("copy");
-		alert('Yay! My email address has been copied to your clipboard :D');
 	}
 
-//Change slideshow pic every 3 seconds
-	function togglePic(){
-		if (currentPicIndex < picArr.length){
-			proPic.attr('src', picArr[currentPicIndex]);
-			currentPicIndex++;
-		}
-		else{
-			currentPicIndex = 0;
-			proPic.attr('src', picArr[currentPicIndex]);
-			currentPicIndex++;
-		}
-	}
-	setInterval(togglePic, 3000);
-
-//Highlight project on hover and fade others
-	for (var i = 1; i <= 3; i++){
-		$('#project'+i).on('mouseenter', projectFocus);
-		$('#project'+i).on('mouseleave', projectAll);
-	}
-
-	function projectFocus(){
-		for (var j = 1; j <= 3; j++){
-			if (this.id === 'project'+j){
-				continue;
-			}
-			$('#project'+j).animate({opacity: 0.5}, 200);
-		}
-	}
-	function projectAll(){
-		for (var j = 1; j <= 3; j++){
-			$('#project'+j).stop().animate({opacity: 1}, 10);
-		}
+	// Move scroll position to top of page after refresh
+	window.onbeforeunload = function () {
+	  window.scrollTo(0, 0);
 	}
 });

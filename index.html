@@ -1,9 +1,9 @@
 <!--   
 Theme Name: Stellartronic
-Theme URL: http://www.dcjwest.com/
+Theme URL: http://dcjwest.github.io
 Description: Hand-crafted portfolio website
 Author: David van der Westhuizen
-Copyright (c) 2018 David van der Westhuizen
+Copyright (c) 2019 David van der Westhuizen
 -->
 
 <!-- =================================== -->
@@ -11,169 +11,112 @@ Copyright (c) 2018 David van der Westhuizen
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>David v.d. Westhuizen | Web Developer</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-	<link rel="stylesheet" href="tools/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="tools/menu button/menu.css">
-	<link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
+
+	<title>David v.d. Westhuizen | Web Developer</title>
+
+	<link rel="shortcut icon" type="image/x-icon" href="images/icons/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<noscript>
-		<style type="text/css">
-			body {
-				opacity: 1;
-			}
-		</style>
-	</noscript>
 </head>
 <body>
-	<!--Header and Navigation-->
-	<header id="navBar">
-		<nav>
-			<a href="index.html"><img class="logo" src="images/icons/dv-logo2.png"></a>
-			<ul>
-				<li><a class="link" href="#about">About</a></li>
-				<li><a class="link" href="#projects">Projects</a></li>
-				<li><a class="link" href="#contact">Contact</a></li>
-			</ul>
-			<ul class="icon-links">
-				<li>
-					<button class="emailBtn"><img src="images/icons/email-icon.png"></button>
-				</li>
-				<li><a href="http://linkedin.com/in/dcjwest" target="_blank"><img src="images/icons/linkedin-icon.png"></a></li>
-				<li><a href="http://facebook.com/dcjwest" target="_blank"><img src="images/icons/facebook-icon.png"></a></li>
-			</ul>
-			<div id="mobile-nav">
-				<div class="row link-row">
-					<div class="col-sm-12 link-bg"><a class="link" href="#about">About</a></div>
-					<div class="col-sm-12 link-bg"><a class="link" href="#projects">Projects</a></div>
-					<div class="col-sm-12 link-bg"><a class="link" href="#contact">Contact</a></div>
-				</div>
-				<div class="row link-row">
-					<div class="col-sm-12 link-bg">
-						<a class="link" href="#"><img src="images/icons/email-icon.png"></a>
-						<a class="link" href="http://linkedin.com/in/dcjwest" target="_blank"><img src="images/icons/linkedin-icon.png"></a>
-						<a class="link" href="http://facebook.com/dcjwest" target="_blank"><img src="images/icons/facebook-icon.png"></a>
-					</div>
-				</div>
-			</div>
-			<div id="menu-btn">
-				<div id = "toggle-menu">
-					<div class = "menu-bar menu-bar-top"></div>
-					<div class = "menu-bar menu-bar-middle"></div>
-					<div class = "menu-bar menu-bar-bottom"></div>
-				</div>
-			</div>
-		</nav>
-	</header>
+	<!-- Navigation -->
+	<nav id="navbar">
+	  <div id="img-div"><a href="#top"><img src="images/icons/mylogo_2019.png" alt="logo"></a></div>
+	  <ul>
+	    <li><a class="nav-link" href="#about">About</a></li>
+	    <li><a class="nav-link" href="#projects">Projects</a></li>
+	    <li><a class="nav-link" href="#contact">Contact</a></li>
+	  </ul>
+	</nav>
 
 	<!-- Landing -->
-	<div class="section" id="intro">
-		<div class="slider"><img id="slider" src="images/slider/david-mj.jpg"></div>
-		<div class="infobox">
-			<h1><span>Hello World</span>, I'm David.</h1>
-			<p>Developer | Dancer | Wine-enthusiast<br><br>I'm passionate about many things, especially Software and Web Development.<br>That's why I taught myself to code.</p>
+	<section id="welcome-section">
+		<div id="slider-container">
+			<img id="slider" src="images/slider/david-mj.jpg"></div>
 		</div>
-	</div>
+	  <div id="hero">
+	    <h1><span>Hello World!</span> I'm David.</h1>
+	  <p>Developer | Researcher | Dancer</p>
+	  </div>
+	</section>
 
-	<!-- About Me -->
-	<div class="section" id="about">
-		<img src="images/david-profile.jpg">
-		<div class="infobox">
-			<h1>About me</h1>
-			<p>I'm a self-taught web developer/programmer, based in Stellenbosch, looking to break out professionally into the world of Information Technology. Physicist by education, I enjoy finding elegant solutions to complex problems.<br>
-			<br>While working as a programmer for an industrial laser-cutting company, I discovered web development and I simply had to learn more! I enjoy learning about various programming languages (I've dabbled in a few), but I find myself particularly interested in front-end web technologies.<br> 
-			<br>When I'm not coding or designing, you'll find me dancing, with or without music ;-).</p><br>
-			<div class="container skillList">
-				<div class="row">
-					<div class="col-sm-12"><h2>Skills</h2></div>
-				</div>
-				<div class="row">
-					<div class="col-sm-6 skillCol">Communication<div class="skillBar"><div class="skill" id="skill1">8</div>10</div></div>
-					<div class="col-sm-6 skillCol">Learning<div class="skillBar"><div class="skill" id="skill2">9</div>10</div></div>
-				</div>
-				<div class="row">
-					<div class="col-sm-6 skillCol">Organisation<div class="skillBar"><div class="skill" id="skill3">7</div>10</div></div>
-					<div class="col-sm-6 skillCol">Researching<div class="skillBar"><div class="skill" id="skill4">8</div>10</div></div>
-				</div>
-				<div class="row">
-					<div class="col-sm-6 skillCol">Web Design<div class="skillBar"><div class="skill" id="skill5">7</div>10</div></div>
-					<div class="col-sm-6 skillCol">Programming<div class="skillBar"><div class="skill" id="skill6">6</div>10</div></div>
-				</div>
-				<div class="row">
-					<div class="col-sm-6 skillCol">UX Design<div class="skillBar"><div class="skill" id="skill7">6</div>10</div></div>
-					<div class="col-sm-6 skillCol">Yelling at PC<div class="skillBar fullBar"><div class="skill" id="skill8">10</div>10</div></div>
-				</div>
-			</div>
+	<!-- Profile and Bio -->
+	<section id="about">
+	  <h2>About Me</h2>
+	  <div class="grid-container about-grid">
+	  	<div id="about-pic">
+		  <img src="images/david-profile.jpg" alt="profile pic">
 		</div>
-	</div>
-
-	<!-- Projects -->
-	<div class="section" id="projects">
-		<h4>Some of my latest work</h4>
-		<div class="row">
-			<div class="col-sm-4">
-				<a class="project-link" href="https://dcjwest.github.io/brickbuster/" target="_blank">
-					<div id="project1" class="project-col">
-						<h5>Brick-BUSTER!</h5><img class="projectPic" src="images/icons/brick.jpg"><p>A simple arcade-style game in which players bounce a ball off a paddle and use it to destroy rows of bricks.</p>
-					</div>
-				</a>
-			</div>
-			<div class="col-sm-4">
-				<a class="project-link" href="https://dcjwest.github.io/ballroom-quiz/" target="_blank">
-					<div id="project2" class="project-col">
-						<h5>Ballroom Dance Quiz</h5><img class="projectPic" src="images/icons/ballroom.jpg"><p>A scintillating quiz filled with crazy questions to determine your type of Ballroom Dance based on your personality.</p>
-					</div>
-				</a>
-			</div>
-			<div class="col-sm-4">
-				<a class="project-link" href="https://dcjwest.github.io/getcha-gizmos/" target="_blank">
-					<div id="project3" class="project-col">
-						<h5>GetchaGizmos Website</h5><img class="projectPic" src="images/icons/GGlogo.jpg"><p>A mock website for a dummy electronics company. Designed using Bootstrap 4 and enriched with scroll animations.</p>
-					</div>
-				</a>
-			</div>
+		<div id="about-bio">
+		  <p>
+		  	I'm a self-taught developer, based in Stellenbosch, looking to break out professionally into the world of Information Technology. Physicist by education, I am wired to find simple yet elegant solutions to complex problems.<br><br>While working as a programmer for an industrial laser-cutting company, I discovered web development and simply had to learn more. I enjoy learning about various programming languages (I've dabbled in a few), but I find myself particularly interested in front-end web technologies.<br><br>
+		  	When I'm not coding or designing, you'll find me dancing, with or without music ;-).
+		</p>
 		</div>
-	</div>
+	  </div>
+	</section>
 
-	<!-- Contact Information -->
-	<div class="section" id="contact">
-		<img id="contactPic" src="images/david-contact.jpg">
-		<h1>Shall we dance?</h1>
-		<p>I'm available for hire anywhere in the areas of Stellenbosch, Somerset West, or Cape Town... For web development or dance; your call :P.</p>
-		<ul>
-			<li>
-				<input type="text" value="dcjwest@gmail.com" id="myEmail">
-				<button class="emailBtn"><img class="contact-icon" src="images/icons/color/email-icon.png">dcjwest@gmail.com</button></li>
-			<li><a href="http://linkedin.com/in/dcjwest" target="_blank"><img class="contact-icon" src="images/icons/color/linkedin-icon.png">LinkedIN</a></li>
-			<li><a href="http://facebook.com/dcjwest" target="_blank"><img class="contact-icon" src="images/icons/color/facebook-icon.png">Facebook</a></li>
-		</ul>
-	</div>
-	<footer><a id="myFooter" href="index.html">&copy; 2018 David van der Westhuizen</a></footer>
+	<!-- Project Portfolio -->
+	<section id="projects">
+		<h2 id="project-header">Some of My Latest Work</h2>
+		<div class="grid-container project-grid">
+			<a href="https://codepen.io/dcjwest/full/VqGryo" target="_blank" class="project">
+	  			<img src="images/icons/mj_tribute.jpg" alt="Tribute Page" class="project-pic">
+	  			<div class="project-title">MJ Tribute Page</div>
+		  	</a>
+			<a href="https://codepen.io/dcjwest/full/MZPZwV" target="_blank" class="project">
+				<img src="images/icons/mblds_survey.jpg" alt="Survey Form" class="project-pic">
+				<div class="project-title">MBLDS Survey</div>
+			</a>
+			<a href="https://codepen.io/dcjwest/full/vvvXWY" target="_blank" class="project">
+			    <img src="images/icons/coffee_house.jpg" alt="Product Landing Page" class="project-pic">
+			    <div class="project-title">Coffee House Landing Page</div>
+			</a>
+			<a href="https://codepen.io/dcjwest/full/MZLwjP" target="_blank" class="project">
+			    <img src="images/icons/js_doc_page.jpg" alt="Technical Doc Page" class="project-pic">
+			    <div class="project-title">JS Technical Document</div>
+			</a>
+			<a href="https://dcjwest.github.io/brickbuster" target="_blank" class="project">
+			    <img src="images/icons/brick.jpg" alt="Brick-buster Game " class="project-pic">
+			    <div class="project-title">Brick-buster Game</div>
+			</a>
+			<a href="https://dcjwest.github.io/ballroom-quiz" target="_blank" class="project">
+			    <img src="images/icons/ballroom.jpg" alt="Ballroom Dance Quiz" class="project-pic">
+			    <div class="project-title">Ballroom Dance Quiz</div>
+			</a>
+		</div>
+	</section>
 
-	<script type="text/javascript" src="tools/bootstrap/js/jquery-3.3.1.js"></script>
-    <!-- <script type="text/javascript" src="tools/popper.js-1.12.5/dist/umd/popper.js"></script> -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="tools/bootstrap/js/bootstrap.min.js"></script>
-	<script type = "text/javascript" src = "script.js"></script>
-	<script>
-		$(function() {
+	<!-- Contact and Footer -->
+	<section id="contact">
+	  <div id="contact-header">
+	    <h2>Shall We Dance?</h2>
+	  <p>I'm available for hire anywhere in the Cape Town and Stellenbosch area ;-)</p>
+	  </div>
+	  <div id="contact-icons">
+	  	<div class="contact-item">
+	  		<a href="http://facebook.com/dcjwest" target="_blank"><img src="images/icons/facebook-icon.png" alt="facebook icon"></a>
+	  	</div>
+	  	<div class="contact-item">
+	  		<a id="profile-link" href="https://github.com/dcjwest" target="_blank"><img src="images/icons/github-icon.png" alt="github icon"></a>
+	  	</div>
+	  	<div class="contact-item">
+	  		<a href="http://linkedin.com/in/dcjwest" target="_blank"><img src="images/icons/linkedin-icon.png"></a>
+	  	</div>
+	  	<div id="email" class="contact-item">
+	  		<input type="text" value="dcjwest@gmail.com" id="myEmail">
+	  		<a id="emailBtn" href="#"><img src="images/icons/email-icon.png">
+		  	 </a>
+		  	 <span class="tooltip">Click to copy my email address to your clipboard! &#9786;</span>
+	  	</div>
+	  </div>
+	</section>
+	<footer>
+	    <a href="#top">&copy; 2019 David van der Westhuizen</a>
+	</footer>
 
-      // Smooth Scrolling code snippet - source: https://stackoverflow.com/questions/7717527/smooth-scrolling-when-clicking-an-anchor-link 
-      $('a[href*="#"]:not([href="#"])').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-            $('html, body').animate({
-              scrollTop: target.offset().top
-            }, 1000);
-            return false;
-          }
-        }
-      });
-    });
-    </script>
+	<script type="text/javascript" src="tools/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
