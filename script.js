@@ -20,19 +20,20 @@ $(function(){
 		];
 	var currentPicIndex = 0;
 
-	// Change slideshow pic every 4 seconds
-	function togglePic(){
-		currentPicIndex++;
-		proPic.fadeOut(400);
-		if (currentPicIndex == picArr.length){currentPicIndex = 0;}
-		
-		setTimeout(function(){
-			proPic.attr('src', picArr[currentPicIndex]);
-		}, 400);
-		proPic.fadeIn(400);
-	}
-
-	setTimeout(setInterval(togglePic, 4000), 5000);
+	$(window).on('load', function() {
+		// Change slideshow pic every 4 seconds
+		function togglePic(){
+			currentPicIndex++;
+			proPic.fadeOut(400);
+			if (currentPicIndex == picArr.length){currentPicIndex = 0;}
+			
+			setTimeout(function(){
+				proPic.attr('src', picArr[currentPicIndex]);
+			}, 400);
+			proPic.fadeIn(400);
+		}
+		setInterval(togglePic, 4000);
+	});
 
 	// Tooltip pop-up events
 	$('#emailBtn').on('click', updateToolTip);
