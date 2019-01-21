@@ -50,6 +50,11 @@ $(window).on('load', function() {
 		];
 	var currentPicIndex = 0;
 
+	// Initialise link between slideshow array and img element's src attribute
+	for (var i = picArr.length - 1; i >= 0; i--) {
+		proPic.attr('src', picArr[i]);
+	}
+
 	// Change slideshow pic every 4 seconds
 	function togglePic(){
 		currentPicIndex++;
