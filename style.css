@@ -11,13 +11,6 @@ Copyright (c) 2019 David van der Westhuizen
 /* Font Embedding */
 
 @font-face {
-  font-family: 'Impact';
-  src: url('fonts/impact.ttf') format('ttf');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'proxima nova light';
   src: url('fonts/proximanova-light-webfont.woff') format('woff');
   font-weight: normal;
@@ -41,6 +34,10 @@ html {
 html, body {
   font-family: 'proxima nova light', Helvetica, sans-serif;
   font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6, footer a, .nav-link {
+  font-family: 'Oswald', sans-serif;
 }
 
 section {
@@ -96,7 +93,6 @@ section {
 
 .nav-link, footer a {
   color: #fff;
-  font-family: 'Impact', sans-serif;
   font-size: 1.4em;
   text-decoration: none;
 }
@@ -148,7 +144,7 @@ section {
   display: flex;
   align-items: center;
   margin: 20px;
-  margin-top: 30px;
+  margin-top: 40px;
   width: 30vw;
   height: 30vw;
 }
@@ -170,9 +166,8 @@ section {
 }
 
 #hero h1 {
-  font-family: 'Impact', sans-serif;
   font-size: 4em;
-  font-weight: lighter;
+  font-weight: bold;
   letter-spacing: 2px;
 }
 
@@ -191,6 +186,12 @@ section {
   margin-top: -60px;
   padding: 60px 0 50px 0;
   width: 100%;
+}
+
+#about h2 {
+  font-weight: lighter;
+  margin: 10px;
+  text-align: center;
 }
 
 .grid-container {
@@ -218,11 +219,6 @@ section {
 #about-bio {
   line-height: 1.5;
   margin: 40px 0;
-}
-
-#about h2 {
-  margin: 10px;
-  text-align: center;
 }
 
 /*========================================*/
@@ -299,7 +295,8 @@ section {
 
 #contact-header h2 {
   font-size: 4em;
-  margin: 10px;
+  font-weight: lighter;
+  margin: 10px 0;
 }
 
 #contact-header p {
@@ -399,7 +396,7 @@ footer a {
   
   .nav-link {font-size: 1.3em;}
   
-  #img-div {width: 25%;}
+  #img-div {width: 20%;}
 
   #welcome-section {
     background: url("images/david-bg-mobile.jpg") no-repeat fixed center;
