@@ -145,8 +145,8 @@ section {
   align-items: center;
   margin: 20px;
   margin-top: 40px;
-  width: 30vw;
-  height: 30vw;
+  width: 28vw;
+  height: 28vw;
 }
 
 #slider {
@@ -160,7 +160,7 @@ section {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   color: #fff;
-  padding: 4px 10px;
+  padding: 0 10px;
   text-align: center;
   width: auto;
 }
@@ -404,8 +404,8 @@ footer a {
   }
 
   #slider-container {
-    width: 50vw;
-    height: 50vw;
+    width: 60vw;
+    height: 60vw;
   }
   
   #hero h1 {font-size: 3em;}
