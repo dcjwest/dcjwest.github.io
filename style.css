@@ -232,6 +232,7 @@ section {
 }
 
 #project-header {
+  font-weight: lighter;
   margin-bottom: 20px;
   text-align: center;
 }
