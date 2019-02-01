@@ -46,6 +46,43 @@ section {
 
 /*========================================*/
 
+/* Splash Screen */
+
+#loader {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 101;
+}
+
+#loader img {max-width: 150px;}
+
+#loader p {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+#loader.hidden {
+  animation: fadeOut 2s;
+  animation-fill-mode: forwards;
+}
+
+/*========================================*/
+
 /* Navigation */
 
 #navbar {

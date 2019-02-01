@@ -21,9 +21,15 @@ Copyright (c) 2019 David van der Westhuizen
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+	<!-- Splash Screen -->
+	<div id="loader">
+		<img src="images/moonwalk.gif" alt="Loading..."/>
+		<p>5, 6, 7, 8...</p>
+	</div>
+
 	<!-- Navigation -->
 	<nav id="navbar">
-	  <div id="img-div"><a href="#top"><img src="images/icons/mylogo_2019.png" alt="logo"></a></div>
+	  <div id="img-div"><a href="https://dcjwest.github.io/"><img src="images/icons/mylogo_2019.png" alt="logo"/></a></div>
 	  <ul>
 	    <li><a class="nav-link" href="#about">About</a></li>
 	    <li><a class="nav-link" href="#projects">Projects</a></li>
@@ -34,7 +40,7 @@ Copyright (c) 2019 David van der Westhuizen
 	<!-- Landing -->
 	<section id="welcome-section">
 		<div id="slider-container">
-			<img id="slider" src="images/slider/david-mj.jpg"></div>
+			<img id="slider" src="images/slider/david-mj.jpg"/></div>
 		</div>
 	  <div id="hero">
 	    <h1><span>Hello World!</span> I'm David.</h1>
@@ -47,7 +53,7 @@ Copyright (c) 2019 David van der Westhuizen
 	  <h2>About Me</h2>
 	  <div class="grid-container about-grid">
 	  	<div id="about-pic">
-		  <img src="images/david-profile.jpg" alt="profile pic">
+		  <img src="images/david-profile.jpg" alt="profile pic"/>
 		</div>
 		<div id="about-bio">
 		  <p>
@@ -63,27 +69,27 @@ Copyright (c) 2019 David van der Westhuizen
 		<h2 id="project-header">Some of My Latest Work</h2>
 		<div class="grid-container project-grid">
 			<a href="https://dcjwest.github.io/MJ-Tribute/" target="_blank" class="project">
-	  			<img src="images/icons/mj_tribute.jpg" alt="Tribute Page" class="project-pic">
+	  			<img src="images/icons/mj_tribute.jpg" alt="Tribute Page" class="project-pic"/>
 	  			<div class="project-title">MJ Tribute Page</div>
 		  	</a>
 			<a href="https://dcjwest.github.io/MBLDS-survey/" target="_blank" class="project">
-				<img src="images/icons/mblds_survey.jpg" alt="Survey Form" class="project-pic">
+				<img src="images/icons/mblds_survey.jpg" alt="Survey Form" class="project-pic"/>
 				<div class="project-title">MBLDS Survey</div>
 			</a>
 			<a href="https://dcjwest.github.io/coffee-house/" target="_blank" class="project">
-			    <img src="images/icons/coffee_house.jpg" alt="Product Landing Page" class="project-pic">
+			    <img src="images/icons/coffee_house.jpg" alt="Product Landing Page" class="project-pic"/>
 			    <div class="project-title">Coffee House Landing Page</div>
 			</a>
 			<a href="https://dcjwest.github.io/JS-tech-doc/" target="_blank" class="project">
-			    <img src="images/icons/js_doc_page.jpg" alt="Technical Doc Page" class="project-pic">
+			    <img src="images/icons/js_doc_page.jpg" alt="Technical Doc Page" class="project-pic"/>
 			    <div class="project-title">JS Technical Document</div>
 			</a>
 			<a href="https://dcjwest.github.io/brickbuster" target="_blank" class="project">
-			    <img src="images/icons/brick.jpg" alt="Brick-buster Game " class="project-pic">
+			    <img src="images/icons/brick.jpg" alt="Brick-buster Game " class="project-pic"/>
 			    <div class="project-title">Brick-buster Game</div>
 			</a>
 			<a href="https://dcjwest.github.io/ballroom-quiz" target="_blank" class="project">
-			    <img src="images/icons/ballroom.jpg" alt="Ballroom Dance Quiz" class="project-pic">
+			    <img src="images/icons/ballroom.jpg" alt="Ballroom Dance Quiz" class="project-pic"/>
 			    <div class="project-title">Ballroom Dance Quiz</div>
 			</a>
 		</div>
@@ -97,27 +103,41 @@ Copyright (c) 2019 David van der Westhuizen
 	  </div>
 	  <div id="contact-icons">
 	  	<div class="contact-item">
-	  		<a href="http://facebook.com/dcjwest" target="_blank"><img src="images/icons/facebook-icon.png" alt="facebook icon"></a>
+	  		<a href="http://facebook.com/dcjwest" target="_blank"><img src="images/icons/facebook-icon.png" alt="facebook icon"/></a>
 	  	</div>
 	  	<div class="contact-item">
-	  		<a id="profile-link" href="https://github.com/dcjwest" target="_blank"><img src="images/icons/github-icon.png" alt="github icon"></a>
+	  		<a id="profile-link" href="https://github.com/dcjwest" target="_blank"><img src="images/icons/github-icon.png" alt="github icon"/></a>
 	  	</div>
 	  	<div class="contact-item">
-	  		<a href="http://linkedin.com/in/dcjwest" target="_blank"><img src="images/icons/linkedin-icon.png"></a>
+	  		<a href="http://linkedin.com/in/dcjwest" target="_blank"><img src="images/icons/linkedin-icon.png"/></a>
 	  	</div>
 	  	<div id="email" class="contact-item">
 	  		<input type="text" value="dcjwest@gmail.com" id="myEmail">
-	  		<a id="emailBtn" href="#"><img src="images/icons/email-icon.png">
+	  		<a id="emailBtn" href="#"><img src="images/icons/email-icon.png"/>
 		  	 </a>
 		  	 <span class="tooltip">Click to copy my email address to your clipboard! &#9786;</span>
 	  	</div>
 	  </div>
 	</section>
 	<footer>
-	    <a href="#top">&copy; 2019 David van der Westhuizen</a>
+	    <a href="https://dcjwest.github.io/">&copy; 2019 David van der Westhuizen</a>
 	</footer>
 
-	<script type="text/javascript" src="tools/jquery-3.3.1.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript">
+
+		// Hide Splash Screen after page loads
+		window.onload = function(){
+			console.log('Fully loaded!');
+			var loader = document.getElementById('loader');
+			loader.className += ' hidden';
+		};
+
+		// Move scroll position to top of page after refresh
+		window.onbeforeunload = function () {
+		  window.scrollTo(0, 0);
+		}
+	</script>
 </body>
 </html>
