@@ -9,34 +9,43 @@ Copyright (c) 2018 David van der Westhuizen
 $(function(){
 
 	// Initialise slideshow variables
-	var proPic = $('#slider');
-	var picArr = [
-		'images/slider/david-mj.jpg',
-		'images/slider/david-dance.jpg',
-		'images/slider/david-bboy.jpg',
-		'images/slider/david-ladybug.jpg',
-		'images/slider/david-mtn.jpg',
-		'images/slider/david-dog.jpg'
-		];
-	var currentPicIndex = 0;
+	var slides = $('#slideshow>li');
+	var currentImgIndex = 0;
+	var imgCache = [];
 
-	// Initialise link between slideshow array and img element's src attribute
-	for (var i = picArr.length - 1; i >= 0; i--) {
-		proPic.attr('src', picArr[i]);
-	}
+	// Use IIFE to preload and cache images
+	(function slidesPreloader(){
+		console.log('preloader fired!', currentImgIndex);
+		if (currentImgIndex < slides.length){
+			// Load images
+			imgCache[currentImgIndex] = new Image();
+			imgCache[currentImgIndex].src = slides.eq(currentImgIndex).find('img').attr('src');
+			imgCache[currentImgIndex].onload = function(){
+				currentImgIndex++;
+				slidesPreloader();
+			}
+		}
+		else {
+			// Initial run to display slideshow properly
+			currentImgIndex = 0;
+			for (var i = 0; i < slides.length; i++){
+				console.log('looping slides!', currentImgIndex);
+				slides.eq(currentImgIndex).fadeIn(100).fadeOut(100);
+				currentImgIndex < slides.length - 1? currentImgIndex++ : currentImgIndex = 0;
 
-	// Change slideshow pic every 4 seconds
-	function togglePic(){
-		currentPicIndex++;
-		proPic.fadeOut(400);
-		if (currentPicIndex == picArr.length){currentPicIndex = 0;}
-		
-		setTimeout(function(){
-			proPic.attr('src', picArr[currentPicIndex]);
-		}, 400);
-		proPic.fadeIn(400);
+			}
+			// Play slideshow
+			runSlideShow();
+		}
+	}());
+
+	function runSlideShow(){
+		console.log('slideshow fired!', currentImgIndex);
+		slides.eq(currentImgIndex).fadeIn(400).delay(3000).fadeOut(400, function(){
+			currentImgIndex < slides.length - 1? currentImgIndex++ : currentImgIndex = 0;
+			runSlideShow();
+		})
 	}
-	setInterval(togglePic, 4000);
 
 	// Tooltip pop-up events
 	$('#emailBtn').on('click', updateToolTip);

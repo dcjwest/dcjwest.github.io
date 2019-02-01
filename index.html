@@ -40,7 +40,14 @@ Copyright (c) 2019 David van der Westhuizen
 	<!-- Landing -->
 	<section id="welcome-section">
 		<div id="slider-container">
-			<img id="slider" src="images/slider/david-mj.jpg"/></div>
+			<ul id="slideshow">
+				<li><img class="slide" src="images/slider/david-dog.jpg"/></li>
+				<li><img class="slide" src="images/slider/david-mj.jpg"/></li>
+				<li><img class="slide" src="images/slider/david-dance.jpg"/></li>
+				<li><img class="slide" src="images/slider/david-bboy.jpg"/></li>
+				<li><img class="slide" src="images/slider/david-ladybug.jpg"/></li>
+				<li><img class="slide" src="images/slider/david-mtn.jpg"/></li>
+			</ul>
 		</div>
 	  <div id="hero">
 	    <h1><span>Hello World!</span> I'm David.</h1>
@@ -129,7 +136,6 @@ Copyright (c) 2019 David van der Westhuizen
 
 		// Hide Splash Screen after page loads
 		window.onload = function(){
-			console.log('Fully loaded!');
 			var loader = document.getElementById('loader');
 			loader.className += ' hidden';
 		};
