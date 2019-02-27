@@ -108,14 +108,13 @@ section {
 
 #img-div {
   float: left;
-  margin: 0 auto;
   text-align: center;
   width: 40%;
 }
 
 #navbar ul {
   float: right;
-  margin: 15px auto;
+  margin: 10px 0;
   text-align: center;
   width: 50%;
 }
@@ -171,22 +170,18 @@ section {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  padding: 15px;
+  padding: 0 15px;
 }
 
 #slider-container {
-  margin: 20px;
-  margin-top: 40px;
   width: 28vw;
   height: 28vw;
 }
 
 #slideshow {
   background-color: #fff;
-  border: 10px solid #fff;
   border-radius: 50%;
   box-shadow: 0 0 20px 5px #fff;
-  display: block;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -197,25 +192,27 @@ section {
 
 .slide {
   border-radius: 50%;
-  margin: 0 auto;
   position: absolute;
-  top: 0;
-  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 94%;
 }
 
 #hero {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   color: #fff;
-  padding: 0 10px;
+  margin-top: 15px;
+  padding: 5px 10px;
   text-align: center;
-  width: auto;
 }
 
 #hero h1 {
   font-size: 4em;
   font-weight: bold;
   letter-spacing: 2px;
+  line-height: 1;
 }
 
 #hero span {
@@ -223,7 +220,10 @@ section {
   text-shadow: 0 0 5px #fff;
 }
 
-#hero p {font-size: 1.5em;}
+#hero p {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
 
 /*========================================*/
 
@@ -452,11 +452,9 @@ footer a {
   }
 
   #slider-container {
-    width: 60vw;
-    height: 60vw;
+    width: 50vw;
+    height: 50vw;
   }
-
-  #slideshow {border: 5px solid #fff;}
   
   #hero h1 {font-size: 3em;}
   #hero p {font-size: 1em;}
@@ -488,9 +486,34 @@ footer a {
 
 @media screen and (max-width: 500px) {
 
+  #slider-container {
+    width: 60vw;
+    height: 60vw;
+  }
+
   .project-grid {grid-template-columns: 1fr;}
 
   .contact-item {margin: 8px;}
 
   .contact-item img {width: 50px;}
+}
+
+@media screen and (orientation:landscape) and (max-width: 1000px){
+
+  #welcome-section {
+    flex-direction: row;
+  }
+
+  #slider-container {
+    width: 50vh;
+    height: 50vh;
+  }
+
+  #hero {
+    margin-left: 10px;
+    width: 50%;
+  }
+
+  #hero h1 {font-size: 2.6em;}
+  #hero p {font-size: .9em;}
 }

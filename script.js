@@ -15,7 +15,6 @@ $(function(){
 
 	// Use IIFE to preload and cache images
 	(function slidesPreloader(){
-		console.log('preloader fired!', currentImgIndex);
 		if (currentImgIndex < slides.length){
 			// Load images
 			imgCache[currentImgIndex] = new Image();
@@ -29,7 +28,6 @@ $(function(){
 			// Initial run to display slideshow properly
 			currentImgIndex = 0;
 			for (var i = 0; i < slides.length; i++){
-				console.log('looping slides!', currentImgIndex);
 				slides.eq(currentImgIndex).fadeIn(100).fadeOut(100);
 				currentImgIndex < slides.length - 1? currentImgIndex++ : currentImgIndex = 0;
 
@@ -40,7 +38,6 @@ $(function(){
 	}());
 
 	function runSlideShow(){
-		console.log('slideshow fired!', currentImgIndex);
 		slides.eq(currentImgIndex).fadeIn(400).delay(3000).fadeOut(400, function(){
 			currentImgIndex < slides.length - 1? currentImgIndex++ : currentImgIndex = 0;
 			runSlideShow();
