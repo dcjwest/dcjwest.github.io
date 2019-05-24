@@ -71,7 +71,7 @@ section {
 }
 
 #loader.hidden {
-  animation: fadeOut 2s linear 4s forwards;
+  animation: fadeOut 2s linear 2s forwards;
 }
 
 .count-num {
@@ -101,6 +101,9 @@ section {
 }
 
 /*========================================*/
+
+/* Hide website initially */
+#app {display: none;}
 
 /* Navigation */
 
@@ -195,7 +198,7 @@ section {
 }
 
 #slider-container {
-  margin-top: 15px;
+  margin-top: 20px;
   width: 28vw;
   height: 28vw;
 }
@@ -226,7 +229,7 @@ section {
   border-radius: 5px;
   color: #fff;
   margin-top: 15px;
-  padding: 5px 10px;
+  padding: 10px;
   text-align: center;
 }
 
@@ -356,7 +359,7 @@ section {
 
 .project-pic {
   border: 1px solid #ccc;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   width: 100%;
 }
 
