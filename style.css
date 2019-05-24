@@ -62,11 +62,35 @@ section {
   z-index: 101;
 }
 
-#loader img {max-width: 150px;}
+#loader img {
+  max-width: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-#loader p {
-  font-size: 1.5em;
+#loader.hidden {
+  animation: fadeOut 2s linear 4s forwards;
+}
+
+.count-num {
+  font-size: 2rem;
   font-weight: bold;
+  margin: 0 8px;
+  opacity: 0;
+  animation: dance-countdown 2.5s infinite;
+}
+
+.count-num:nth-child(2){animation-delay: .5s}
+.count-num:nth-child(3){animation-delay: 1s}
+.count-num:nth-child(4){animation-delay: 1.5s}
+
+@keyframes dance-countdown {
+  0% {opacity: 0;}
+  15% {opacity: 1; font-size: 3rem;}
+  30% {opacity: 0;}
+  100% {opacity: 0;}
 }
 
 @keyframes fadeOut {
@@ -74,11 +98,6 @@ section {
     opacity: 0;
     visibility: hidden;
   }
-}
-
-#loader.hidden {
-  animation: fadeOut 2s linear 4s;
-  animation-fill-mode: forwards;
 }
 
 /*========================================*/
@@ -96,6 +115,7 @@ section {
 
 #navbar img {
   background-color: #fff;
+  border-radius: 50%;
   margin: 5px;
   margin-bottom: 0;
   max-width: 50px;
@@ -103,6 +123,7 @@ section {
 
 #navbar img:hover {
   background-color: red;
+  box-shadow: 0 0 3px 3px #fff;
   transition: .3s;
 }
 
@@ -127,7 +148,7 @@ section {
   position: relative;
 }
 
-.nav-link, footer a {
+#resume-link, .nav-link, footer a {
   color: #fff;
   font-size: 1.4em;
   text-decoration: none;
@@ -174,6 +195,7 @@ section {
 }
 
 #slider-container {
+  margin-top: 15px;
   width: 28vw;
   height: 28vw;
 }
@@ -200,7 +222,7 @@ section {
 }
 
 #hero {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 5px;
   color: #fff;
   margin-top: 15px;
@@ -209,7 +231,7 @@ section {
 }
 
 #hero h1 {
-  font-size: 4em;
+  font-size: 3.5em;
   font-weight: bold;
   letter-spacing: 2px;
   line-height: 1;
@@ -221,8 +243,31 @@ section {
 }
 
 #hero p {
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin-top: 10px;
+}
+
+#resume-btn {
+  background-color: transparent;
+  border: 3px solid #f00;
+  border-radius: 25px;
+  color: #f00;
+  cursor: pointer;
+  font-family: 'proxima nova light', sans-serif;
+  font-size: .7em;
+  font-weight: bold;
+  letter-spacing: .05em;
+  max-width: 200px;
+  margin-top: 10px;
+  outline: none;
+  padding: 2px 8px;
+}
+
+#resume-btn:hover {
+  background-color: #f00;
+  box-shadow: 0 0 3px 3px #fff;
+  color: #000;
+  transition: .3s;
 }
 
 /*========================================*/
@@ -342,6 +387,7 @@ section {
 }
 
 #contact-header h2 {
+  display: inline-block;
   font-size: 4em;
   font-weight: lighter;
   margin: 10px 0;

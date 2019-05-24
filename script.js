@@ -9,9 +9,9 @@ Copyright (c) 2018 David van der Westhuizen
 $(function(){
 
 	// Initialise slideshow variables
-	var slides = $('#slideshow>li');
-	var currentImgIndex = 0;
-	var imgCache = [];
+	let slides = $('#slideshow>li');
+	let currentImgIndex = 0;
+	let imgCache = [];
 
 	// Use IIFE to preload and cache images
 	(function slidesPreloader(){
@@ -21,16 +21,16 @@ $(function(){
 			imgCache[currentImgIndex].src = slides.eq(currentImgIndex).find('img').attr('src');
 			imgCache[currentImgIndex].onload = function(){
 				currentImgIndex++;
-				slidesPreloader();
+				slidesPreloader(); // Recursively call preloader until all images are cached
 			}
 		}
 		else {
 			// Initial run to display slideshow properly
 			currentImgIndex = 0;
-			for (var i = 0; i < slides.length; i++){
+
+			for (let i = 0; i < slides.length; i++){
 				slides.eq(currentImgIndex).fadeIn(100).fadeOut(100);
 				currentImgIndex < slides.length - 1? currentImgIndex++ : currentImgIndex = 0;
-
 			}
 			// Play slideshow
 			runSlideShow();
@@ -40,7 +40,7 @@ $(function(){
 	function runSlideShow(){
 		slides.eq(currentImgIndex).fadeIn(400).delay(3000).fadeOut(400, function(){
 			currentImgIndex < slides.length - 1? currentImgIndex++ : currentImgIndex = 0;
-			runSlideShow();
+			runSlideShow(); // Loop slideshow
 		})
 	}
 
