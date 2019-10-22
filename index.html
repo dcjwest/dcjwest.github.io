@@ -69,8 +69,8 @@ Copyright (c) 2019 David van der Westhuizen
 			  		<img src="images/david-profile.jpg" alt="profile pic"/>
 				</div>
 				<div id="about-bio">
-					<p>I'm a self-taught developer, based in Stellenbosch, looking to break out professionally into the world of Software Development. Physicist by education, I am wired to find simple yet elegant solutions to complex problems and I see every challenge as an opportunity to learn and grow.<br><br>While working as a programmer for an industrial laser-cutting company, I discovered Web Development and simply had to learn more. I enjoy learning about various programming languages (I've dabbled in a few), but I find myself particularly interested in front-end web technologies.<br><br>
-					When I'm not coding or designing, you'll find me dancing, with or without music &#128526;</p>
+					<p>I'm a web developer currently based in Stellenbosch. Physicist by education, I am wired to find simple yet elegant solutions to complex problems and I see every challenge as an opportunity to learn and grow.<br><br>While working as a programmer for an industrial laser-cutting company, I discovered a love for creating websites and apps. I enjoy learning about various technologies, but I find myself particularly interested in Front End Web Development.<br><br>
+					When I'm not coding, you'll find me dancing, with or without music &#128526;</p>
 				</div>
 			</div>
 		</section>
@@ -79,13 +79,17 @@ Copyright (c) 2019 David van der Westhuizen
 		<section id="projects">
 			<h2 id="project-header">Some of My Latest Work</h2>
 			<div class="grid-container project-grid">
+				<a href="https://dcjwest.github.io/pomodoro/" target="_blank" class="project">
+					<img src="images/icons/pomodoro.jpg" alt="Pomodoro Clock" class="project-pic"/>
+					<div class="project-title">Pomodoro Clock</div>
+				</a>
 				<a href="https://dcjwest.github.io/weather-app/" target="_blank" class="project">
 					<img src="images/icons/weather-app.jpg" alt="Weather App" class="project-pic"/>
 					<div class="project-title">Weather App</div>
 				</a>
 				<a href="https://dcjwest.github.io/js30-drumkit/" target="_blank" class="project">
 				    <img src="images/icons/drumkit.jpg" alt="JS Drumkit Simulator" class="project-pic"/>
-				    <div class="project-title">JS Drumkit Simulator</div>
+				    <div class="project-title">Drumkit Simulator</div>
 				</a>			
 				<a href="https://dcjwest.github.io/brickbuster" target="_blank" class="project">
 				    <img src="images/icons/brick-buster.jpg" alt="Brick-buster Game " class="project-pic"/>
@@ -99,10 +103,6 @@ Copyright (c) 2019 David van der Westhuizen
 				    <img src="images/icons/coffee-house.jpg" alt="Coffee House Landing Page" class="project-pic"/>
 				    <div class="project-title">Coffee House Landing Page</div>
 				</a>
-				<a href="https://dcjwest.github.io/MJ-Tribute/" target="_blank" class="project">
-		  			<img src="images/icons/mj-tribute.jpg" alt="MJ Tribute Page" class="project-pic"/>
-		  			<div class="project-title">MJ Tribute Page</div>
-			  	</a>
 			</div>
 		</section>
 
@@ -143,23 +143,5 @@ Copyright (c) 2019 David van der Westhuizen
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="script.js"></script>
-	<script type="text/javascript">
-
-		// Hide Splash Screen after page loads
-		window.onload = function(){
-			const app = document.getElementById('app');
-			const loader = document.getElementById('loader');
-
-			loader.className += ' hidden';
-			app.style.display = 'block';
-
-		};
-
-		// Move scroll position to top of page after refresh
-		window.onbeforeunload = function () {
-		  window.scrollTo(0, 0);
-		}
-
-	</script>
 </body>
 </html>

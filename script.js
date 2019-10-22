@@ -7,13 +7,24 @@ Copyright (c) 2018 David van der Westhuizen
 */
 
 $(function(){
-
-	// Initialise slideshow variables
-	let slides = $('#slideshow>li');
+	// Initialise variables
+	const app = $('#app');
+	const loader = $('#loader');
+	const slides = $('#slideshow>li');
 	let currentImgIndex = 0;
 	let imgCache = [];
 
-	// Use IIFE to preload and cache images
+	loader.removeClass('hidden');
+	app.css("display", "none");
+	window.scrollTo(0, 0);
+
+	// Hide loader screen after animation completes and show website
+	setTimeout(() => {
+		loader.addClass("hidden");
+		app.css("display", "block");
+	}, 4000);
+
+	// IIFE to preload and cache slider images
 	(function slidesPreloader(){
 		if (currentImgIndex < slides.length){
 			// Load images
@@ -32,7 +43,6 @@ $(function(){
 				slides.eq(currentImgIndex).fadeIn(100).fadeOut(100);
 				currentImgIndex < slides.length - 1? currentImgIndex++ : currentImgIndex = 0;
 			}
-			// Play slideshow
 			runSlideShow();
 		}
 	}());
