@@ -1,147 +1,182 @@
-<!--   
-Theme Name: Stellartronic
-Theme URL: http://dcjwest.github.io
-Description: Hand-crafted portfolio website
-Author: David van der Westhuizen
-Copyright (c) 2019 David van der Westhuizen
--->
-
-<!-- =================================== -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-
-	<title>David v.d. Westhuizen | Web Developer</title>
-
-	<link rel="shortcut icon" type="image/x-icon" href="images/icons/favicon.ico">
-	<link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>David v.d. Westhuizen | Web Developer</title>
 </head>
 <body>
-	<!-- Splash Screen -->
-	<div id="loader">
-		<img src="images/moonwalk.gif" alt="Loading..."/>
-		<div id="countdown">
-			<span class="count-num">5</span>
-			<span class="count-num">6</span>
-			<span class="count-num">7</span>
-			<span class="count-num">8</span>
-		</div>
-	</div>
-	<div id="app">
-	<!-- Navigation -->
-		<nav id="navbar">
-		  <div id="img-div"><a href="https://dcjwest.github.io/"><img src="images/icons/mylogo_2019v2.png" alt="logo"/></a></div>
-		  <ul>
-		    <li><a class="nav-link" href="#about">About</a></li>
-		    <li><a class="nav-link" href="#projects">Projects</a></li>
-		    <li><a class="nav-link" href="#contact">Contact</a></li>
-		  </ul>
-		</nav>
-
-		<!-- Landing -->
-		<section id="welcome-section">
-			<div id="slider-container">
-				<ul id="slideshow">
-					<li><img class="slide" src="images/slider/david-dog.jpg"/></li>
-					<li><img class="slide" src="images/slider/david-mj.jpg"/></li>
-					<li><img class="slide" src="images/slider/david-dance.jpg"/></li>
-					<li><img class="slide" src="images/slider/david-bboy.jpg"/></li>
-					<li><img class="slide" src="images/slider/david-ladybug.jpg"/></li>
-					<li><img class="slide" src="images/slider/david-mtn.jpg"/></li>
-				</ul>
-			</div>
-			<div id="hero">
-				<h1><span>Hello World!</span> I'm David.</h1>
-				<p>Developer | Researcher | Dancer</p>
-				<a id="resume-link" href="D van der Westhuizen CV 2019.pdf" target="_blank" download><button id="resume-btn">Download Resume</button></a>
-			</div>
-		</section>
-
-		<!-- Profile and Bio -->
-		<section id="about">
-			<h2>About Me</h2>
-			<div class="grid-container about-grid">
-			  	<div id="about-pic">
-			  		<img src="images/david-profile.jpg" alt="profile pic"/>
-				</div>
-				<div id="about-bio">
-					<p>I'm a web developer currently based in Stellenbosch. Physicist by education, I am wired to find simple yet elegant solutions to complex problems and I see every challenge as an opportunity to learn and grow.<br><br>While working as a programmer for an industrial laser-cutting company, I discovered a love for creating websites and apps. I enjoy learning about various technologies, but I find myself particularly interested in Front End Web Development.<br><br>
-					When I'm not coding, you'll find me dancing, with or without music &#128526;</p>
-				</div>
-			</div>
-		</section>
-
-		<!-- Project Portfolio -->
-		<section id="projects">
-			<h2 id="project-header">Some of My Latest Work</h2>
-			<div class="grid-container project-grid">
-				<a href="https://dcjwest.github.io/pomodoro/" target="_blank" class="project">
-					<img src="images/icons/pomodoro.jpg" alt="Pomodoro Clock" class="project-pic"/>
-					<div class="project-title">Pomodoro Clock</div>
-				</a>
-				<a href="https://dcjwest.github.io/weather-app/" target="_blank" class="project">
-					<img src="images/icons/weather-app.jpg" alt="Weather App" class="project-pic"/>
-					<div class="project-title">Weather App</div>
-				</a>
-				<a href="https://dcjwest.github.io/js30-drumkit/" target="_blank" class="project">
-				    <img src="images/icons/drumkit.jpg" alt="JS Drumkit Simulator" class="project-pic"/>
-				    <div class="project-title">Drumkit Simulator</div>
-				</a>			
-				<a href="https://dcjwest.github.io/brickbuster" target="_blank" class="project">
-				    <img src="images/icons/brick-buster.jpg" alt="Brick-buster Game " class="project-pic"/>
-				    <div class="project-title">Brick-buster Game</div>
-				</a>
-				<a href="https://dcjwest.github.io/ballroom-quiz" target="_blank" class="project">
-				    <img src="images/icons/ballroom.jpg" alt="Ballroom Dance Quiz" class="project-pic"/>
-				    <div class="project-title">Ballroom Dance Quiz</div>
-				</a>
-				<a href="https://dcjwest.github.io/coffee-house/" target="_blank" class="project">
-				    <img src="images/icons/coffee-house.jpg" alt="Coffee House Landing Page" class="project-pic"/>
-				    <div class="project-title">Coffee House Landing Page</div>
-				</a>
-			</div>
-		</section>
-
-		<!-- Contact and Footer -->
-		<section id="contact">
-			<div id="contact-header">
-				<h2>Shall We Dance?</h2><img id="carlton-dance" src="images/carlton.gif" alt="Shall We Dance?" width="50px" />
-				<p>I'm eagerly looking for my next challenge and I'd love to hear from you!</p>
-		  	</div>
-		  	<div id="contact-icons">
-		  		<div id="email" class="contact-item">
-			  		<input type="text" value="dcjwest@gmail.com" id="myEmail">
-			  		<a id="emailBtn" href="#">
-			  			<img src="images/icons/email-icon.png"/>
-				  	</a>
-				  	<span class="tooltip">Click to copy my email address to your clipboard! &#9786;</span>
-			  	</div>
-			  	<div class="contact-item">
-			  		<a href="http://linkedin.com/in/dcjwest" target="_blank">
-			  			<img src="images/icons/linkedin-icon.png"/>
-			  		</a>
-			  	</div>
-			  	<div class="contact-item">
-			  		<a id="profile-link" href="https://github.com/dcjwest" target="_blank">
-			  			<img src="images/icons/github-icon.png" alt="github icon"/>
-			  		</a>
-			  	</div>
-			  	<div class="contact-item">
-		  			<a href="http://facebook.com/dcjwest" target="_blank">
-		  				<img src="images/icons/facebook-icon.png" alt="facebook icon"/>
-		  			</a>
-		  		</div>
-		  	</div>
-		</section>
-		<footer>
-		    <a href="https://dcjwest.github.io/">&copy; 2019 David van der Westhuizen</a>
-		</footer>
-	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script type="text/javascript" src="script.js"></script>
+    <div id="modal-overlay"></div>
+    <header>
+        <a href="#" id="logo">
+            <img src="./images/dw-logo.png" alt="logo" />
+            <span id="brand" class="flip-x" data-text="dcjwest">dcjwest</span>
+        </a>
+        <nav>
+            <ul class="nav-bar">
+                <li><a href="#about" class="nav-link flip-y" data-text="About">About</a></li>
+                <li><a href="#work" class="nav-link flip-y" data-text="Work">Work</a></li>
+                <li><a href="#contact" class="nav-link flip-y" data-text="Contact">Contact</a></li>
+                <ul class="social-icons">
+                    <li><a class="social-link" href="mailto:dcjwest@gmail.com?subject=Hi David!"><i class="fa fa-envelope"></i></a></li>
+                    <li><a class="social-link" href="https://github.com/dcjwest" target="_blank"><i class="fa fa-github"></i></a></li>
+                    <li><a class="social-link" href="http://linkedin.com/in/dcjwest" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+            </ul>
+            <div id="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="flex-center">
+            <div id="bg-vid">
+                <video src="./images/david-dance.mp4" type="video/mp4" preload="true" autoplay loop muted ></video>
+            </div>
+            <div id="hero">
+                <h1>Hello, World!<br />I'm <span>David</span>.</h1>
+                <p>Developer | Dancer</p>
+                <div class="btn-group">
+                    <a href="#work" data-text="See My Work" class="btn">
+                        <span class="btn-overlay"></span>
+                        <span class="btn-text">See My Work</span>
+                    </a>
+                    <a href="#contact" data-text="Get In Touch" class="btn">
+                        <span class="btn-overlay"></span>
+                        <span class="btn-text">Get In Touch</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="grid-container">
+            <h2>About Me</h2>
+            <div class="slider">
+                <img src="./images/slider/david-profile.jpg" class="show-slide" />
+                <img src="./images/slider/david-bboy.jpg" />
+                <img src="./images/slider/david-dance.jpg" />
+                <img src="./images/slider/david-dog.jpg" />
+                <img src="./images/slider/david-ladybug.jpg" />
+                <img src="./images/slider/david-mtn.jpg" />
+            </div>
+            <p>
+                I'm a web developer currently based in Stellenbosch.
+                Physicist/Engineer by education, I am wired to find simple yet elegant solutions to complex problems and I see every challenge as an opportunity to learn and grow.
+                <br /><br />While working as a programmer for an industrial laser-cutting company, I discovered a love for creating websites and apps. 
+                I enjoy learning about various technologies, but I find myself particularly interested in Front End Web Development, and constantly strive to improve my skill set and write clean and concise code.
+                <br /><br />When I'm not coding, you'll find me dancing, with or without music.
+            </p>
+        </section>
+        <section id="work">
+            <h2>My Work</h2>
+            <div id="projects" class="grid-container">
+                <a class="project"
+                    data-name="Pomodoro Clock"
+                    data-desc="Sometimes it's easy to forget to take breaks while coding or studying.
+                                That's why I built this ReactJS app based on the Pomodoro time-management technique.
+                                A timer splits work into customisable intervals, typically 25 minutes in length, separated by short breaks to optimise productivity."
+                    data-url="https://dcjwest.github.io/pomodoro/"
+                    data-image_src="./images/icons/pomodoro.jpg">
+                    <img src="./images/icons/pomodoro.jpg" alt="Pomodoro Clock">
+                </a>
+                <a class="project"
+                    data-name="Weather App"
+                    data-desc="Where would we be without weather apps? The Moon, since no atmosphere means no weather to check...haha.
+                                This is my rendition of a simple weather app with the data retrieved from the Dark Sky API.
+                                It also makes use of the LocationIQ API to indicate the user's whereabouts, as well as Skycons.js to showcase the current weather with an animated glyph."
+                    data-url="https://dcjwest.github.io/weather-app/"
+                    data-image_src="./images/icons/weather-app.jpg">
+                    <img src="./images/icons/weather-app.jpg" alt="Weather App">
+                </a>
+                <a class="project"
+                    data-name="Drumkit Simulator"
+                    data-desc="I've always loved music and there's something quite satisfying about making your own.
+                                This simulator, built completely with vanilla JavaScript, allows the user to jam out their own creativity,
+                                using nine awesome drumkit sounds."
+                    data-url="https://dcjwest.github.io/js30-drumkit/"
+                    data-image_src="./images/icons/drumkit.jpg">
+                    <img src="./images/icons/drumkit.jpg" alt="Drumkit Simulator">
+                </a>
+                <a class="project"
+                    data-name="Brick Buster Game"
+                    data-desc="I was a huge fan of retro games as a kid and I believe they're making a comeback.
+                                This is a classic arcade-style game in which the player bounces a ball off a paddle and uses it to break rows of bricks.
+                                Graphics are drawn using the Canvas API and modulated with JavaScript."
+                    data-url="https://dcjwest.github.io/brickbuster"
+                    data-image_src="./images/icons/brick-buster.jpg">
+                    <img src="./images/icons/brick-buster.jpg" alt="Brick Buster Game">
+                </a>
+                <a class="project"
+                    data-name="Ballroom Dance Quiz"
+                    data-desc="Besides web dev, dancing is my other passion. But just like the best websites, different dances have their own unique character.
+                                This short yet fun quiz features crazy questions to help determine which ballroom dance best matches a user's personality."
+                    data-url="https://dcjwest.github.io/ballroom-quiz"
+                    data-image_src="./images/icons/ballroom.jpg">
+                    <img src="./images/icons/ballroom.jpg" alt="Ballroom Dance Quiz">
+                </a>
+                <a class="project"
+                    data-name="Coffee Shop Website"
+                    data-desc="According to the dictionary, &lt;em&gt;'a programmer is a machine that turns coffee into code.'&lt;&#47;em&gt; We all love it, we need it, can't build web things without it.
+                                So I thought I'd dedicate a lovely landing page to every developer's favourite beverage (though I've heard of those magical unicorn devs that drink tea instead)."
+                    data-url="https://dcjwest.github.io/coffee-house/"
+                    data-image_src="./images/icons/coffee-house.jpg">
+                    <img src="./images/icons/coffee-house.jpg" alt="Coffee Shop Website">
+                </a>
+                <article id="modal">
+                    <button id="close-btn">&#10060;</button>
+                    <div class="grid-container project-container">
+                        <h3 id="modal-title">Project Title</h3>
+                        <img id="modal-image" src="./images/icons/pomodoro.jpg" />
+                        <p id="modal-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus placeat ipsum voluptatum porro ex. Illum, atque temporibus id ipsum a neque voluptatum alias, veritatis ipsa eveniet officia distinctio, cum dolorum?</p>
+                        <div id="project-btn-group" class="btn-group">
+                            <a id="modal-demo" data-text="Visit Site" class="btn" href="#" target="_blank">
+                                <span class="btn-overlay"></span>
+                                <span class="btn-text">Visit Site</span>
+                            </a>
+                            <a id="modal-code" data-text="View Code" class="btn" href="#" target="_blank">
+                                <span class="btn-overlay"></span>
+                                <span class="btn-text">View Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section id="contact" class="flex-center">
+            <h2>Shall We Dance?</h2>
+            <div class="form-container">
+                <p>
+                    Please feel free to reach out if I can be of any help to you.
+                    I'm also happy to discuss any work opportunities related to Software Development...
+                    <br /><br />Or dance - I'm flexible like that &#128526;
+                </p>
+                <form method="POST" action="form_handler.php">
+                    <input type="text" name="name" placeholder="Name *" class="form-control" required/><br />
+                    <input type="email" name="email" placeholder="Email Address *" class="form-control" required/><br />
+                    <input type="text" name="subject" placeholder="Subject" class="form-control" /><br />
+                    <textarea type="text" name="message" placeholder="Message... *" rows="5" class="form-control" required></textarea>
+                    <button id="form-submit" type="submit" name="submit" class="btn" data-text="Send">
+                        <span class="btn-overlay"></span>
+                        <span class="btn-text">Send</span>
+                    </button><br />
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="flex-center">
+        <a href="#">&copy; 2019 David van der Westhuizen</a>
+        <ul class="social-icons">
+            <li><a class="social-link" href="mailto:dcjwest@gmail.com?subject=Hi David!"><i class="fa fa-envelope"></i></a></li>
+            <li><a class="social-link" href="https://github.com/dcjwest" target="_blank"><i class="fa fa-github"></i></a></li>
+            <li><a class="social-link" href="http://linkedin.com/in/dcjwest" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+    </footer>
+    <script src="./app.js"></script>
 </body>
 </html>
