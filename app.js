@@ -38,6 +38,7 @@ const toggleModal = (event) => {
         modalImage.src = currentProject.dataset.image_src;
         modalDesc.innerHTML = currentProject.dataset.desc;
         modalDemoBtn.href = currentProject.dataset.url;
+        modalCodeBtn.href = currentProject.dataset.code;
 
         overlay.addEventListener("click", toggleModal);
         closeModalBtn.addEventListener("click", toggleModal);
