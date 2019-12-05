@@ -1,3 +1,4 @@
+const body = document.body;
 const header = document.querySelector("header");
 const navBar = header.querySelector(".nav-bar");
 const navLinks = [...navBar.querySelectorAll("a")];
@@ -30,8 +31,10 @@ const toggleMenu = () => {
 const toggleModal = (event) => {
     modal.classList.toggle("show");
     overlay.classList.toggle("show");
+    let scrollY = window.scrollY;
 
     if (modal.classList.contains("show")) {
+        
         let currentProject = event.target.classList.contains("project")? event.target : event.target.parentNode;
 
         modalTitle.innerHTML = currentProject.dataset.name;
@@ -42,10 +45,21 @@ const toggleModal = (event) => {
 
         overlay.addEventListener("click", toggleModal);
         closeModalBtn.addEventListener("click", toggleModal);
+
+        body.style.position = 'fixed';
+        body.style.top = `-${scrollY}px`;
+        console.log(`Modal open: ${body.style.top}`);
+        body.parentNode.style.scrollBehavior = "auto";
     }
     else {
         overlay.removeEventListener("click", toggleModal);
         closeModalBtn.removeEventListener("click", toggleModal);
+        console.log(`Modal closed: ${body.style.top}`);
+        scrollY = body.style.top;
+        body.style.position = '';
+        body.style.top = '';
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+        body.parentNode.style.scrollBehavior = "smooth";
     }
 }
 
@@ -59,6 +73,7 @@ const switchSlide = () => {
 window.onload = () => {
     window.scrollTo(0, 0);
     setInterval(switchSlide, 4000);
+    setInterval(() => console.log(window.scrollY), 1000);
 }
 
 window.onscroll = () => {
